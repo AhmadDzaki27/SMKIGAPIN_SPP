@@ -37,7 +37,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="exampleInputEmail1">NISN</label>
-                          <input type="text" class="form-control " name="Nisn" value="<?= $ubah1['nisn'] ?>">
+                          <input type="text" class="form-control " name="Nisn" value="<?= $ubah1['nisn'] ?>" readonly>
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">Nama Siswa</label>

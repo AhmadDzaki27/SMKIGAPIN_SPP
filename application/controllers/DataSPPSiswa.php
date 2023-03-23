@@ -172,7 +172,6 @@ class DataSPPSiswa extends CI_Controller
 		$this->form_validation->set_rules("jurusan", "Jurusan");
 		$this->form_validation->set_rules("jenis_spp", "Jenis SPP");
 
-
 		if ($this->form_validation->run() == FALSE) {
 			$data['ubah'] = $this->SPPSiswa_Model->detail_data($kd);
 			$data['ubah1'] = $this->Siswa_Model->detail_data($kd);
@@ -209,7 +208,6 @@ class DataSPPSiswa extends CI_Controller
 		// $this->form_validation->set_rules("tahun_keluar", "Tahun keluar", "required");
 		$this->form_validation->set_rules("jurusan", "Jurusan");
 		$this->form_validation->set_rules("jenis_spp", "Jenis SPP");
-
 
 
 		if ($this->form_validation->run() == FALSE) {

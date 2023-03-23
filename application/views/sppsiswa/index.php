@@ -72,9 +72,8 @@
                               <option value="laki-laki" <?php echo  set_select('jk_siswa', 'laki-laki'); ?>>Laki-laki</option>
                               <option value="perempuan" <?php echo  set_select('jk_siswa', 'perempuan'); ?>>Perempuan</option>
                             </select>
-
-
                           </div>
+
                           <div class="form-group">
                             <label for="exampleInputPassword1">Tempat Lahir</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="tmpt_lahir" value="<?php echo set_value('tmpt_lahir'); ?>">
@@ -87,11 +86,9 @@
                             <label for="exampleInputPassword1">Alamat</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="almat" value="<?php echo set_value('almat'); ?>">
                           </div>
-
                         </div>
+
                         <div class="col-md-6">
-
-
                           <div class="form-group">
                             <label for="exampleInputPassword1">No Telp</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="telp_siswa" value="<?php echo set_value('telp_siswa'); ?>">
@@ -101,12 +98,10 @@
                             <select class="form-control" name="kd_ta">
                               <option>--Pilih Tahun Masuk--</option>
                               <?php
-
                               foreach ($tahunajaran as $row) { ?>
                                 <option value="<?= $row->kode_ta ?>" <?php echo set_select('kd_ta', $row->kode_ta); ?>><?= $row->tahun_ajaran ?></option>
                               <?php } ?>
                             </select>
-
                           </div>
 
                           <!-- diambil dari tbl jurusan -->
@@ -119,20 +114,19 @@
                                 <option value="<?= $jur->kode_jurusan ?>" <?php echo set_select('jurusan', $jur->kode_jurusan); ?>><?= $jur->nama_jurusan ?></option>
                               <?php } ?>
                             </select>
-
                           </div>
+
                           <div class="form-group">
                             <label for="exampleInputPassword1">Kelas</label>
                             <select class="form-control" name="kode_kelas" id="selectkelas">
                               <option>--Pilih Kelas--</option>
                               <?php
-
                               foreach ($kelas as $row) { ?>
                                 <option value="<?= $row->kode_kelas ?>" <?php echo set_select('kode_kelas', $row->kode_kelas); ?>><?= $row->kode_kelas ?></option>
                               <?php } ?>
                             </select>
-
                           </div>
+
                           <!-- diambil dari tbl jenis spp -->
                           <div class="form-group">
                             <label for="exampleInputPassword1">Jenis SPP</label>
@@ -145,6 +139,7 @@
                               ?>
                             </select>
                           </div>
+
                           <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="text" class="form-control" id="exampleInputPassword1" name="password" value="<?php echo set_value('password'); ?>">
@@ -173,7 +168,7 @@
     <!-- /.row -->
     <!-- list data -->
     <div class="row">
-      <div class="col-12">
+      <div class="col-md-12">
         <div class="card">
           <!-- card-body -->
           <div class="card-body">
@@ -187,7 +182,7 @@
                     <th>Jenis Kelamin</th>
                     <th>No Telp</th>
                     <th>Jurusan</th>
-
+                    <th>Password</th>
                     <th>Action</th>
 
                   </tr>
@@ -203,6 +198,7 @@
                       <td><?= $row->jk ?></td>
                       <td><?= $row->no_telfon ?></td>
                       <td><?= $row->kode_jurusan ?></td>
+                      <td><?= $row->password ?></td>
 
                       <td>
                         <div class="btn-group">
